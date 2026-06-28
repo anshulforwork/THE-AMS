@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AMS Life — Personal Self-Improvement App
 
-## Getting Started
+A modern, mobile-friendly web app connected to your Google Sheet (or local JSON for dev). Built for daily check-ins, streaks, finance tracking, learning roadmap, skills, planning, networking, and journaling.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+cd ams-app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Default login password:** `ams2026` (change in `.env.local`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Dashboard** — KPIs, charts, month-by-month summary
+- **Daily Check-in** — mood, productivity, learning, expenses, journal
+- **Streaks** — current/longest streak + GitHub-style heatmap
+- **Finance** — expenses, savings rate, RD/FD corpus, 4-layer resilience
+- **Learning** — Udemy course roadmap with progress tracking
+- **Skills & Reading** — skill progression map + book tracker
+- **Planning** — monthly deliverables and milestones
+- **Network** — personal CRM with follow-up reminders
+- **Journal** — searchable reflections and key learnings
+- **Settings** — setup values, sheet init, Excel import
 
-To learn more about Next.js, take a look at the following resources:
+## Google Sheets Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [SETUP.md](./SETUP.md) for full instructions to connect your centralized Google Sheet.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Import Existing Excel Data
 
-## Deploy on Vercel
+```bash
+npm run import:xlsx
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Or use **Settings → Import from Excel** in the app.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy to Vercel
+
+1. Push to GitHub
+2. Import in Vercel
+3. Add env vars from `.env.example`
+4. Deploy
+
+## Tech Stack
+
+- Next.js 16 + TypeScript
+- Tailwind CSS
+- NextAuth (password login)
+- Google Sheets API (production) / Local JSON (dev)
+- Recharts
