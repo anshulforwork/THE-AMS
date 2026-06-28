@@ -31,11 +31,13 @@ export function Sidebar() {
     <aside className="hidden lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-white/10 lg:bg-black/20">
       <div className="p-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 font-bold text-white">
-            A
-          </div>
+          <img
+            src="/profile.png"
+            alt="Profile"
+            className="h-11 w-11 rounded-full object-cover ring-2 ring-violet-500/40"
+          />
           <div>
-            <p className="font-semibold text-white">AMS Life</p>
+            <p className="font-semibold text-white">Anshul Sahu</p>
             <p className="text-xs text-zinc-500">Self Improvement</p>
           </div>
         </div>

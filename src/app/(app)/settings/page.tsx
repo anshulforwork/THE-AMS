@@ -59,9 +59,16 @@ export default function SettingsPage() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-white lg:text-3xl">Settings</h1>
-        <p className="text-zinc-400">Configure your app and data connection</p>
+      <div className="flex items-center gap-4">
+        <img
+          src="/profile.png"
+          alt="Profile"
+          className="h-16 w-16 rounded-full object-cover ring-2 ring-violet-500/40"
+        />
+        <div>
+          <h1 className="text-2xl font-bold text-white lg:text-3xl">{setup.name || "Settings"}</h1>
+          <p className="text-zinc-400">Configure your app and data connection</p>
+        </div>
       </div>
 
       {message && (
